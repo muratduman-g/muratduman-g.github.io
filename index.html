@@ -15,7 +15,7 @@
 
     <!-- 3D Model Viewer -->
     <model-viewer id="arViewer"
-        src="https://raw.githubusercontent.com/gunterAlce/webar-hack/main/microFos3.glb"
+        src="./CardboardBoxes.glb"
         ios-src="https://raw.githubusercontent.com/gunterAlce/webar-hack/main/microF3.usdz"
         alt="A 3D model in AR"
         ar
@@ -26,4 +26,13 @@
     </model-viewer>
 
 </body>
+<script>
+    const arViewer = document.querySelector('#arViewer');
+    const loadingMessage = document.querySelector('#loadingMessage');
+    arViewer.addEventListener('load', () => {
+      loadingMessage.style.display = 'none';
+    });
+  </script>
+  
 </html>
+<!-- src="https://raw.githubusercontent.com/gunterAlce/webar-hack/main/microFos3.glb" -->
